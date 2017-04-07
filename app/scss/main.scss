@@ -1,12 +1,228 @@
 @import "fonts";
 @import "libs";
 @import "vars";
+@import "base";
 
 
-.img-responsive {
-	display: block;
-	max-width: 100%;
-	height: auto;
+.main-menu {
+  background-color: rgba(0,0,0,0.6);
+}
+
+.list-header-menu {
+  font-size: 0;
+
+  li {
+    display: inline-block;
+    vertical-align: top;
+    width: 25%;
+    text-align: center;
+  }
+
+  a {
+    display: inline-block;
+    vertical-align: top;
+    width: 100%;
+    font-size: 14px;
+    color: black;
+    padding: 10px 0;
+
+    &:hover {
+      text-decoration: none;
+      background-color: rgba(0,0,0,0.9);
+      color: white;
+    }
+  }
+}
+
+.main-info {
+  font-size: 0;
+  padding: 10px 0;
+}
+
+.main-whoiam {
+  display: inline-block;
+  vertical-align: top;
+  width: 50%;
+  font-size: 0;
+  padding-right: 20px;
+
+  &__img {
+    display: inline-block;
+    vertical-align: top;
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    border: 1px solid grey;
+    overflow: hidden;
+    background-color: grey;
+
+    img {
+      display: block;
+      max-width: 100%;
+      height: auto;
+    }
+  }
+
+  &__desc {
+    display: inline-block;
+    vertical-align: top;
+    padding-top: 150px;
+  }
+
+  &__title {
+    font-size: 20px;
+    line-height: 1.2em;
+  }
+
+  &__lead {
+    font-size: 14px;
+  }
+}
+
+.main-contacts {
+  display: inline-block;
+  vertical-align: top;
+  width: 50%;
+  padding-top: 75px;
+  padding-left: 20px;
+
+  &__item {
+    display: inline-block;
+    vertical-align: top;
+    width: 100%;
+    text-align: left;
+
+    &-title {
+      display: inline-block;
+      vertical-align: top;
+      width: 20%;
+      font-size: 16px;
+    }
+
+    &-link {
+      display: inline-block;
+      vertical-align: top;
+      width: 80%;
+      font-size: 16px;
+    }
+  }
+}
+
+.main-about {
+  display: inline-block;
+  vertical-align: top;
+  width: 50%;
+  font-size: 16px;
+  padding-right: 20px;
+}
+
+.main-work {
+  display: inline-block;
+  vertical-align: top;
+  width: 50%;
+  font-size: 16px;
+  padding-left: 20px;
+
+  &__item {
+    border-bottom: 1px dotted black;
+    padding-bottom: 5px;
+    margin-bottom: 5px;
+  }
+
+  &__item-title {
+    font-size: 16px;
+    line-height: 1.2em;
+  }
+}
+
+.main-portfolio {
+  font-size: 0;
+
+  &__item {
+    display: inline-block;
+    vertical-align: top;
+    width: 30%;
+    margin-left: 5%;
+    margin-bottom: 20px;
+    position: relative;
+    z-index: 10;
+
+    &:nth-of-type(3n+1) {
+      margin-left: 0;
+    }
+
+    &-img {
+      display: block;
+      width: 100%;
+
+      img {
+        display: block;
+        max-width: 100%;
+        height: auto;
+      }
+    }
+
+    &-desc {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+      display: inline-block;
+      vertical-align: top;
+      width: auto;
+      padding: 5px 10px;
+      // height: 30px;
+      background-color: rgba(0,0,0,0.4);
+      font-size: 18px;
+      line-height: 30px;
+      color: white;
+      z-index: 20;
+    }
+
+    &-link {
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: block;
+      width: 100%;
+      height: 100%;
+      z-index: 30;
+      transition: all 300ms;
+
+      &:hover {
+        background-color: rgba(31,22,154,0.7);
+        transition: all 300ms;
+      }
+    }
+  }
+}
+
+.main-skills {
+  font-size: 0;
+
+  &__item {
+    display: inline-block;
+    vertical-align: top;
+    width: 20%;
+
+    &-img {
+      display: block;
+      width: 100%;
+      text-align: center;
+
+      img {
+        display: inline-block;
+        vertical-align: top;
+
+      }
+    }
+
+    &-desc {
+      display: block;
+      text-align: center;
+      font-size: 14px;
+    }
+  }
 }
 
 
