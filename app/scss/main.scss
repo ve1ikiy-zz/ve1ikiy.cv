@@ -3,9 +3,20 @@
 @import "vars";
 @import "base";
 
+.main-header {
+  // position: sticky;
+  // display: block;
+  // margin: 0 auto;
+  // height: 40px;
+  // top: 0;
+  // left: 0;
+  // z-index: 100;
+  // background-color: rgba(73,73,75,0.3);
+}
 
 .main-menu {
-  background-color: rgba(0,0,0,0.6);
+  // background-color: rgba(255,255,255,0.6);
+
 }
 
 .list-header-menu {
@@ -36,15 +47,28 @@
 
 .main-info {
   font-size: 0;
-  padding: 10px 0;
+  padding: 25px 0;
+
+  background-image: url("../img/index-contacts-bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.main-moreinfo {
+  font-size: 0;
+  padding: 15px 0;
 }
 
 .main-whoiam {
   display: inline-block;
   vertical-align: top;
-  width: 50%;
+  width: 48%;
   font-size: 0;
-  padding-right: 20px;
+  margin-right: 2%;
+
+  background-color: $color-item-background;
+  padding: 20px 0 20px 20px;
+  border-radius: 10px;
 
   &__img {
     display: inline-block;
@@ -82,9 +106,13 @@
 .main-contacts {
   display: inline-block;
   vertical-align: top;
-  width: 50%;
+  width: 48%;
   padding-top: 75px;
-  padding-left: 20px;
+  margin-left: 2%;
+  background-color: $color-item-background;
+  padding: 20px 20px 20px 20px;
+  border-radius: 10px;
+  min-height: 290px;
 
   &__item {
     display: inline-block;
@@ -104,6 +132,168 @@
       vertical-align: top;
       width: 80%;
       font-size: 16px;
+    }
+  }
+}
+
+.main-contacts__item-icon {
+  display: block;
+  color: black;
+  text-align: center;
+  font-family: "FontAwesome";
+}
+
+.main-contacts__work {
+  margin-top: 15px;
+
+  .main-contacts__item {
+    margin-bottom: 10px;
+  }
+
+  .main-contacts__item-icon {
+    display: inline-block;
+    vertical-align: top;
+    font-size: 16px;
+    line-height: 20px;
+    text-align: left;
+
+    &--mail {
+
+      &::before {
+        display: block;
+        content: "\f1fa";
+      }
+    }
+
+    &--phone {
+
+      &::before {
+        display: block;
+        content: "\f095";
+      }
+    }
+
+    &--skype {
+
+      &::before {
+        display: block;
+        content: "\f17e";
+      }
+    }
+
+    &--telegram {
+
+      &::before {
+        display: block;
+        content: "\f2c6";
+      }
+    }
+  }
+}
+
+.main-contacts__social {
+  font-size: 0;
+  text-align: left;
+  padding: 10px 0;
+  margin-top: 15px;
+
+  .main-contacts__item {
+    display: inline-block;
+    vertical-align: top;
+    width: 50px;
+    height: 50px;
+    margin-left: 20px;
+    border-radius: 50%;
+    overflow: hidden;
+    background-color: $color-social-item;
+
+    position: relative;
+
+    &:first-of-type {
+      margin-left: 0;
+    }
+
+    &-title {
+      font-size: 0;
+    }
+
+    &-link {
+      font-size: 0;
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: block;
+      width: 100%;
+      height: 100%;
+
+
+      &:hover {
+
+      & + .main-contacts__item-icon {
+          color: white;
+        }
+      }
+    }
+  }
+
+  .main-contacts__item-icon {
+    font-size: 20px;
+    line-height: 50px;
+
+    &--lastfm {
+
+      &::before {
+        display: block;
+        content: "\f202";
+      }
+    }
+
+    &--soundcloud {
+
+      &::before {
+        display: block;
+        content: "\f1be";
+      }
+    }
+
+    &--fb {
+
+      &::before {
+        display: block;
+        content: "\f09a";
+      }
+    }
+
+    &--vk {
+
+      &::before {
+        display: block;
+        content: "\f189";
+      }
+    }
+
+    &--github {
+
+      &::before {
+        display: block;
+        content: "\f09b";
+      }
+    }
+
+    &--gitlab {
+
+      &::before {
+        display: block;
+        content: "\f296";
+      }
+    }
+
+    &--blog {
+
+      &::before {
+        display: block;
+        content: "\f0ac";
+      }
     }
   }
 }
@@ -137,6 +327,8 @@
 
 .main-portfolio {
   font-size: 0;
+  background-color: $color-section-grey;
+  padding: 10px 0;
 
   &__item {
     display: inline-block;
@@ -199,6 +391,7 @@
 
 .main-skills {
   font-size: 0;
+  padding: 15px 0;
 
   &__item {
     display: inline-block;
