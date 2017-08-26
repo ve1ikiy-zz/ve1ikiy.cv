@@ -4,19 +4,17 @@
 @import "base";
 
 .main-header {
-  // position: sticky;
-  // display: block;
-  // margin: 0 auto;
-  // height: 40px;
-  // top: 0;
-  // left: 0;
-  // z-index: 100;
-  // background-color: rgba(73,73,75,0.3);
+  position: sticky;
+  display: block;
+  margin: 0 auto;
+  height: 40px;
+  top: 0;
+  left: 0;
+  z-index: 100;
 }
 
 .main-menu {
-  // background-color: rgba(255,255,255,0.6);
-
+  background-color: rgba(220,220,220,1);
 }
 
 .list-header-menu {
@@ -34,13 +32,16 @@
     vertical-align: top;
     width: 100%;
     font-size: 14px;
-    color: black;
+    color: $color-main-color;
     padding: 10px 0;
+    transition: color 300ms, background-color 500ms;
 
     &:hover {
       text-decoration: none;
-      background-color: rgba(0,0,0,0.9);
-      color: white;
+      background-color: $color-header-link-hover-bg;
+      color: $color-header-link-hover;
+
+      transition: color 300ms, background-color 500ms;
     }
   }
 }
@@ -123,8 +124,12 @@
     &-title {
       display: inline-block;
       vertical-align: top;
-      width: 20%;
+      width: auto;
       font-size: 16px;
+
+      &__desc {
+        font-size: 0;
+      }
     }
 
     &-link {
@@ -132,6 +137,12 @@
       vertical-align: top;
       width: 80%;
       font-size: 16px;
+      color: $color-main-color;
+
+      &:hover {
+        text-decoration: none;
+        color: $color-header-link-hover;
+      }
     }
   }
 }
@@ -145,6 +156,7 @@
 
 .main-contacts__work {
   margin-top: 15px;
+
 
   .main-contacts__item {
     margin-bottom: 10px;
@@ -161,6 +173,7 @@
 
       &::before {
         display: block;
+        padding-top: 2px;
         content: "\f1fa";
       }
     }
@@ -169,6 +182,7 @@
 
       &::before {
         display: block;
+        padding-top: 2px;
         content: "\f095";
       }
     }
@@ -177,6 +191,7 @@
 
       &::before {
         display: block;
+        padding-top: 2px;
         content: "\f17e";
       }
     }
@@ -185,6 +200,7 @@
 
       &::before {
         display: block;
+        padding-top: 2px;
         content: "\f2c6";
       }
     }
@@ -229,8 +245,10 @@
 
       &:hover {
 
+
       & + .main-contacts__item-icon {
           color: white;
+          transition: 300ms;
         }
       }
     }
