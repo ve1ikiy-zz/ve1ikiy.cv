@@ -1,13 +1,33 @@
-@import "fonts";
-@import "libs";
-@import "vars";
+@charset 'UTF-8';
 
+// 1. Configuration and helpers
+@import
+  'abstracts/variables',
+  'abstracts/functions',
+  'abstracts/mixins';
 
-.img-responsive {
-	display: block;
-	max-width: 100%;
-	height: auto;
-}
+// 2. Vendors
+@import
+  'vendor/normalize';
 
+// 3. Base stuff
+@import
+  'base/base',
+  'base/fonts',
+  'base/typography',
+  'base/helpers';
 
-@import "media"; // Всегда в конце
+// 4. Layout-related sections
+@import
+  'layout/header',
+  'layout/footer';
+
+// 5. Components
+@import
+  'components/button';
+
+// 6. Page-specific styles
+@import
+  'pages/home';
+
+// 7. Themes

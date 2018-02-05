@@ -11,6 +11,7 @@ var gulp           = require('gulp'),
 		cache          = require('gulp-cache'),
 		autoprefixer   = require('gulp-autoprefixer'),
 		ftp            = require('vinyl-ftp'),
+		gcmq 					 = require('gulp-group-css-media-queries'),
 		notify         = require("gulp-notify");
 
 // Скрипты проекта
@@ -30,7 +31,7 @@ gulp.task('js', ['common-js'], function() {
 		'app/js/common.min.js', // Всегда в конце
 		])
 	.pipe(concat('scripts.min.js'))
-	// .pipe(uglify()) // Минимизировать весь js (на выбор)
+	.pipe(uglify()) // Минимизировать весь js (на выбор)
 	.pipe(gulp.dest('app/js'))
 	.pipe(browserSync.reload({stream: true}));
 });
@@ -51,6 +52,7 @@ gulp.task('sass', function() {
 	.pipe(sass({outputStyle: 'expand'}).on("error", notify.onError()))
 	.pipe(rename({suffix: '.min', prefix : ''}))
 	.pipe(autoprefixer(['last 15 versions']))
+	.pipe(gcmq())
 	.pipe(cleanCSS()) // Опционально, закомментировать при отладке
 	.pipe(gulp.dest('app/css'))
 	.pipe(browserSync.reload({stream: true}));
